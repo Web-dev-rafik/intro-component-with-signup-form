@@ -1,42 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  Learn to code by watching others
+  <main class="main">
+    <section class="header">
+      <h1 class="header-title">Learn to code by watching others</h1>
+      <p class="header-desc">See how experienced developers solve problems in real-time. Watching scripted tutorials is
+        great,
+        but understanding how developers think is invaluable.</p>
+    </section>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+    <div class="content">
+      <div class="try">
+        <p class="try-text"><span class="try-bold">Try it free 7 days</span> then $20/mo. thereafter</p>
+      </div>
 
-  Try it free 7 days then $20/mo. thereafter
+      <form action="/" id="form" class="form">
+        <div class="form-field">
+          <!-- Labels are visually hidden but accessible for screen readers -->
+          <label for="first-name" class="visually-hidden">First Name</label>
+          <input type="text" id="first-name" class="form-input" placeholder="First Name" required>
+          <img src="./images/icon-error.svg" alt="Error" id="first-name-err-icon" class="form-err-icon" width="24"
+            height="24">
+          <div id="first-name-log" class="form-log">First Name cannot be empty</div>
+        </div>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+        <div class="form-field">
+          <label for="last-name" class="visually-hidden">Last Name</label>
+          <input type="text" id="last-name" class="form-input" placeholder="Last Name" required>
+          <img src="./images/icon-error.svg" alt="Error" id="last-name-err-icon" class="form-err-icon" width="24"
+            height="24">
+          <div id="last-name-log" class="form-log">Last Name cannot be empty</div>
+        </div>
 
-  Claim your free trial 
+        <div class="form-field">
+          <label for="email" class="visually-hidden">Email Address</label>
+          <input type="email" id="email" class="form-input" placeholder="Email Address" required>
+          <img src="./images/icon-error.svg" alt="Error" id="email-err-icon" class="form-err-icon" width="24"
+            height="24">
+          <div id="email-log" class="form-log">Looks like this is not an email</div>
+        </div>
 
-  By clicking the button, you are agreeing to our Terms and Services
-  
+        <div class="form-field">
+          <label for="password" class="visually-hidden">Password</label>
+          <input type="password" id="password" class="form-input" placeholder="Password" required>
+          <img src="./images/icon-error.svg" alt="Error" id="password-err-icon" class="form-err-icon" width="24"
+            height="24">
+          <div id="password-log" class="form-log">Password cannot be empty</div>
+        </div>
+
+        <button type="submit" id="form-btn" class="form-btn">Claim your free trial</button>
+
+        <div class="form-info">By clicking the button, you are agreeing to our <span class="form-info-important">Terms
+            and
+            Services</span></div>
+      </form>
+    </div>
+  </main>
+
+
+  <script src="main.js"></script>
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Random-useless">@Random-uselesse</a>.
     </p>
   </footer>
 </body>
+
 </html>
